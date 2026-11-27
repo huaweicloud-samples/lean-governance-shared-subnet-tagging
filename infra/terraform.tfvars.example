@@ -1,0 +1,21 @@
+# ---------------------------------------------------------------------------
+# Copy this file to terraform.tfvars and fill in the values.
+# Credentials are NOT stored here — export HW_ACCESS_KEY / HW_SECRET_KEY in
+# your shell before `terraform apply`.
+# ---------------------------------------------------------------------------
+
+region     = "cn-north-4"
+project_id = "<your-project-id>"   # required: TMS needs it for region-level resources
+
+# Pipe-separated type|id|name triples of the shared VPC/subnets to Name-tag.
+# Generate it in the SHARING account with:
+#   python ../src/scripts/generate_id_name_list.py --vpc-id <vpc-id>
+# Example:
+# ids_to_names = "vpc|<vpc-id>|My Shared VPC|subnet|<subnet-id>|Shared Private Subnet A|"
+
+# ---- Optional helpers (leave OFF for the default tagging-only apply) ----
+create_sample_vpc = false
+create_share      = false
+ram_principals    = []
+sample_vpc_cidr   = "10.0.0.0/16"
+sample_vpc_name   = "shared-demo"

@@ -1,0 +1,10 @@
+# Python dependencies for the tagging helper invoked by Terraform local-exec
+# (src/scripts/tag_resources.py). Install into the Python that `terraform`
+# will call `python` from, before `terraform apply`:
+#
+#   pip install -r src/requirements.txt
+#
+# huaweicloudsdkiam is only needed for the optional src/scripts/get_project_id.py
+# helper (listing your project id); it is NOT required for terraform apply.
+huaweicloudsdkcore
+huaweicloudsdktms
