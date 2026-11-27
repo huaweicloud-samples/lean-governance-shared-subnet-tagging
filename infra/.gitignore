@@ -1,0 +1,15 @@
+# Terraform working dirs / state
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+crash.log
+terraform.rc
+
+# Local variables (may contain real values — never commit)
+terraform.tfvars
+*.tfvars
+
+# Python build artifacts
+__pycache__/
+*.pyc
